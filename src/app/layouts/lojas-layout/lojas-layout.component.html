@@ -1,0 +1,34 @@
+<app-header-loja></app-header-loja>
+
+<app-banner-loja></app-banner-loja>
+
+<main>
+  <div class="bg_gray">
+    <div role="main" class="container margin_detail">
+        <div class="page_header element_to_stick">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-xl-4 col-lg-5 col-md-5">
+                        <div class="search_bar_list">
+                            <form asp-action="Index" asp-controller="Home" method="get">
+                                <input type="text" class="form-control" id="Search" name="Search" placeholder="Pesquisar">
+                                <button type="submit"><i class="icon_search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /bg_gray -->
+</main>
+
+<app-footer-loja></app-footer-loja>
+

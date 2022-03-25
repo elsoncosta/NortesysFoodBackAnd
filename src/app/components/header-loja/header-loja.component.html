@@ -1,0 +1,94 @@
+<header class="header_in clearfix">
+  <div class="container">
+      <div id="logo">
+          <a [routerLink]="[loja.path + '/home']">
+            <img src="{{loja.urlLogoTemp}}" style="max-width: 35px" /> {{loja.nome}}
+          </a>
+      </div>
+      <ul id="top_menu">
+          <!-- @if (NtsSession.Cliente == null)
+          {
+              <li><a href="@Url.Action("LogarCliente", "MeuCarrinho")" onclick="getUrl(this); return false;" id="sign-in" class="login">Login</a></li>
+          } -->
+          <li>
+              <div class="dropdown-cart">
+                  <!-- @{
+                      if (NtsSession.GetLocalStorageMesa() != null)
+                      {
+                          <a asp-area="" asp-controller="Mesa" asp-action="Index" class="cart_bt"><strong id="CarrinhoQuantidade">@NtsSession.CarrinhoPedido.itens.Count</strong></a>
+                      }
+                      else
+                      {
+                          <a asp-area="" asp-controller="MeuCarrinho" asp-action="Index" class="cart_bt"><strong id="CarrinhoQuantidade">@NtsSession.CarrinhoPedido.itens.Count</strong></a>
+                      }
+                  } -->
+
+                  <div class="dropdown-menu">
+                      <ul id="CarrinhoUl">
+                          <!--
+                              foreach (var item in NtsSession.CarrinhoPedido.itens)
+
+                                  <li>
+                                      <figure><img src="@item.IconeUrlTemp" data-src="@item.IconeUrlTemp" alt="" width="50" height="50" class="lazy"></figure>
+                                      <strong><span>@item.NomeProduto</span>@string.Format(CultureInfo.GetCultureInfo("pt-BR"), "R$ {0:N2}", item.Valor)</strong>
+                                      <a href="" onclick="ObjetoVenda.RemoveProduto(this); return false;" id="@item.Id" class="action"><i class="icon_trash_alt"></i></a>
+                                  </li>
+
+                          } -->
+                      </ul>
+                      <div class="total_drop">
+                          <!-- <div class="clearfix add_bottom_15"><strong>Total</strong><span id="CarrinhoTotal">string.Format(CultureInfo.GetCultureInfo("pt-BR"), "R$ {0:N2}", NtsSession.CarrinhoPedido.ValorTotal)</span></div> -->
+
+                              <!-- if (NtsSession.GetLocalStorageMesa() != null)
+
+                                  <a asp-controller="Mesa" asp-action="Index" class="btn_1 outline">Realizar pedido mesa</a>
+                                  if (NtsSession.GetPedidoSession() != null)
+
+                                      <a href="@Url.Action("Details", "Pedidos", new { id=NtsSession.GetPedidoSession() })" class="btn_1">Itens da mesa</a>
+
+
+
+                                  <a asp-controller="MeuCarrinho" asp-action="Index" class="btn_1 outline">Ver carrinho</a>
+                               -->
+
+                      </div>
+                  </div>
+              </div>
+              <!-- /dropdown-cart-->
+          </li>
+      </ul>
+
+      <!-- /top_menu -->
+      <a href="#0" class="open_close">
+          <i class="icon_menu"></i><span>Menu</span>
+      </a>
+      <nav class="main-menu">
+          <div id="header_menu">
+              <a href="#0" class="open_close">
+                  <i class="icon_close"></i><span>Menu</span>
+              </a>
+              <a ><img src="{{loja.urlLogoTemp}}" width="35" height="35" alt=""></a>
+          </div>
+          <ul>
+              <li>
+                  <a [routerLink]="[loja.path + '/home']" class="show-submenu">Inicial</a>
+              </li>
+              <!-- @if (NtsSession.Cliente != null) -->
+
+                  <li>
+                      <a [routerLink]="['Pedidos/index']">Pedidos</a>
+                  </li>
+                  <li>
+                      <a [routerLink]="['Enderecos/index']" >Endereços</a>
+                  </li>
+                  <li>
+                      <a [routerLink]="['Pedidos/index']">Usuario</a>
+                  </li>
+                  <li>
+                      <a [routerLink]="['Pedidos/Usuario/sair']">Sair</a>
+                  </li>
+
+          </ul>
+      </nav>
+  </div>
+</header>

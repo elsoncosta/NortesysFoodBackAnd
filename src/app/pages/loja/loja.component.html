@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-12">
+
+       <div class="row">
+            <div class="col-12">
+                <h2 class="title_small">Categorias</h2>
+                <div>
+                    <drag-scroll *ngFor="let item of listCategoria" >
+                      <figure>
+                        <img drag-scroll-item src="{{item.iconeUrlTemp}}">
+                        <a href="?CategoriaId={{item.id}}"><h3>{{item.nome}}</h3></a>
+                    </figure>
+                    </drag-scroll>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 list_menu">
+                <section id="section-1">
+                    <h4>Produtos</h4>
+                    <div class="row">
+
+                        <div class="col-md-6" *ngFor="let item of listProdutos">
+                            <a class="menu_item" (click)="openModal(item)" [routerLink]="">
+
+                                <figure><img src="{{getImagem(item.imagens)}}" alt="thumb" ></figure>
+                                <h3>{{item.nome}}</h3>
+                                <p>{{item.descricao}}</p>
+                                <strong>{{item.preco | currency:"BRL"}}</strong>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- /row -->
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+

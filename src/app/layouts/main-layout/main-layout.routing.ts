@@ -3,5 +3,5 @@ import { IndexComponent } from 'src/app/pages/index/index.component';
 
 
 export const MainLayoutRoutes: Routes = [
-    { path: 'Index',      component: IndexComponent },
+    { path: 'index',      component: IndexComponent }
 ];

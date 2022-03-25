@@ -1,0 +1,32 @@
+<div id="carousel-home">
+  <div class="owl-carousel owl-theme">
+      <!--/owl-slide-->
+      <!-- for (int i = 0; i < banners.Count; i++)
+
+          var item = banners[i];
+          string classSlide = i == 0 ? "owl-slide cover " : "owl-slide cover owl-lazy"; -->
+          <div class="owl-slide cover owl-lazy" data-src="@item.UrlTemporaria">
+              <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+                  <div class="container">
+                      <div class="row justify-content-center justify-content-md-start">
+                          <div class="col-lg-6 static">
+                              <div class="slide-text white">
+                                  <h2 class="owl-slide-animated owl-slide-title">item.Titulo</h2>
+                                  <p class="owl-slide-animated owl-slide-subtitle">
+                                      item.Descricao
+                                  </p>
+                                  <!-- if (!string.IsNullOrEmpty(item.Link)) -->
+
+                                      <!-- <div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="@item.Link" onclick="getUrl(this); return false;" role="button">Visitar</a></div> -->
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  </div>
+  <div id="icon_drag_mobile"></div>
+  <div class="wave hero"></div>
+</div>

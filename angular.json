@@ -28,24 +28,23 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/assets/css/style.css",
               "src/assets/css/custom.css",
               "src/assets/css/home.css",
-              "src/assets/css/detail-page.css",
-              "src/assets/css/listing.css"
+              "src/assets/css/listing.css",
+              "src/assets/css/detail-page.css"
             ],
             "scripts": [
-              "src/assets/js/common_scripts.min.js",
-              "src/assets/js/common_func.js",
-              "src/assets/assets/validate.js",
-              "src/assets/js/sticky_sidebar.min.js",
-              "src/assets/js/sticky-kit.js",
-              "src/assets/js/specific_detail.js",
-              "src/assets/js/specific_listing.js",
-              "src/assets/js/slider.js",
-              "src/assets/js/video_header.min.js",
-              "src/assets/js/modernizr.min.js",
-              "src/assets/js/header_video.js"
+              "./src/assets/js/custom.js",
+              "./src/assets/js/site.js",
+              "./src/assets/js/common_scripts.min.js",
+              "./src/assets/js/common_func.js",
+              "./src/assets/assets/validate.js",
+              "./src/assets/js/slider.js",
+              "./src/assets/js/modernizr.min.js",
+              "./src/assets/js/video_header.js",
+              "./src/assets/js/header_video.js"
             ]
           },
           "configurations": {
@@ -53,8 +52,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -113,7 +112,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           }
         }
       }

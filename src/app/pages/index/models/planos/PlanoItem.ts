@@ -1,0 +1,30 @@
+export interface PlanoItem {
+  $id: string
+  url: string
+  adesao: string
+  adicionais: string
+  destaque: string
+  descricao: string
+  nm_parcelas_pla: string
+  nm_parcelasrecorrencia_pla: string
+  nome: string
+  nome_grade: string
+  id: string
+  adesao_parcela: string
+  recorrencia_parcela: string
+  mensalidade: string
+  adicional_recorrente: string
+  adicional_avulso: string
+  valor_primeira_cobranca: string
+  trial_dias: string
+  trial_auto_contratar: string
+  com_frete: string
+  desativado: string
+  periodicidade: string
+  periodicidade_nome: string
+  periodicidade_frequencia: string
+  prazo: string
+  auto_renovacao: string
+  prorrogar_ao_renovar: string
+  dias_gratis: string
+}

@@ -1,5 +1,5 @@
 var HeaderVideo = (function ($, document) {
-    
+
     var settings = {
         container: $('.header-video'),
         header: $('.header-video--media'),
@@ -15,7 +15,7 @@ var HeaderVideo = (function ($, document) {
         setFluidContainer();
         bindClickAction();
         settings.videoCloseTrigger.hide();
-        
+
         if(videoDetails.teaser) {
             appendTeaserVideo();
         }
@@ -29,7 +29,7 @@ var HeaderVideo = (function ($, document) {
         videoDetails = {
             id: settings.header.attr('data-video-src'),
             teaser: settings.header.attr('data-teaser-source'),
-            provider: settings.header.attr('data-provider').toLowerCase(),
+            provider: typeof str === 'string' ? settings.header.toLowerCase() : '', //settings.header.attr('data-provider').toLowerCase(),
             videoHeight: settings.header.attr('data-video-height'),
             videoWidth: settings.header.attr('data-video-width')
         }
@@ -77,7 +77,7 @@ var HeaderVideo = (function ($, document) {
             settings.container.append(html);
         }
     };
-    
+
     var createFrame = function() {
         // Added an ID attribute to be able to remove the video element when the user clicks on the remove button
         if(videoDetails.provider === 'youtube') {
@@ -135,5 +135,5 @@ var HeaderVideo = (function ($, document) {
     return {
         init: init
     };
-    
+
 })(jQuery, document);
